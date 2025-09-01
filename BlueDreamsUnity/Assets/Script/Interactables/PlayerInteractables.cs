@@ -17,7 +17,7 @@ public class PlayerInteractables : MonoBehaviour
     {
         CheckInteractables();
     }
-    void CheckInteractables()
+    private void CheckInteractables()
     {
         RaycastHit hit;
         Vector3 rayOrigin = myCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.5f));
