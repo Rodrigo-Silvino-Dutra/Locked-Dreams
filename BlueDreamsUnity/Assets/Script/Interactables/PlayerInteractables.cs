@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInteractables : MonoBehaviour
 {
     [SerializeField] private Camera myCam; 
-    private float rayDis = 
+    private float rayDis = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +28,13 @@ public class PlayerInteractables : MonoBehaviour
             if(interactable != null)
             {
                 InteractionUIManager._instance.TriggerCursor(true);
+            }else
+            {
+                InteractionUIManager._instance.TriggerCursor(false);
             }
-        }
+        }else
+        {
+            InteractionUIManager._instance.TriggerCursor(false);
+        } 
     }
 }
