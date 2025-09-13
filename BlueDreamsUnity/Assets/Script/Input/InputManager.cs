@@ -6,8 +6,6 @@ using UnityEngine.InputSystem.Interactions;
 
 public class InputManager : MonoBehaviour
 {
-    private float lastInteractTime;
-    private float interactCooldown = 0.2f;
     private PlayerInput playerInput;
     private InputAction moveAction;
     private InputAction moveCamAction;
@@ -44,8 +42,8 @@ public class InputManager : MonoBehaviour
         moveCamAction.performed += OnMoveCameraEvent;
         moveCamAction.canceled += OnMoveCameraEvent;
 
-        interaction.performed += OnInteractStarted;
-        interaction.canceled += OnInteractCanceled;
+        interaction.started += OnInteract;
+        interaction.canceled += OnInteract;
 
     }
     private void OnDisable()
@@ -56,8 +54,8 @@ public class InputManager : MonoBehaviour
         moveCamAction.performed -= OnMoveCameraEvent;
         moveCamAction.canceled -= OnMoveCameraEvent;
 
-        interaction.performed -= OnInteractStarted;
-        interaction.canceled -= OnInteractCanceled;
+        interaction.started -= OnInteract;
+        interaction.canceled -= OnInteract;
     }
     public void OnMoveEvent(InputAction.CallbackContext valueMove)
     {
@@ -69,14 +67,9 @@ public class InputManager : MonoBehaviour
         xyCam.x = valueCamMove.ReadValue<Vector2>().x;
         xyCam.y = valueCamMove.ReadValue<Vector2>().y;
     }
-    public void OnInteractStarted(InputAction.CallbackContext valueInteract)
+    public void OnInteract(InputAction.CallbackContext valueInteract)
     {
-        interactionPressed = true;
-    }
-    public void OnInteractCanceled(InputAction.CallbackContext valueInteract)
-    {
-        interactionPressed = false;
-    }
-
-    
+        if (valueInteract.started)interactionPressed = true;
+        else if (valueInteract.canceled)interactionPressed = false;
+    }    
 }

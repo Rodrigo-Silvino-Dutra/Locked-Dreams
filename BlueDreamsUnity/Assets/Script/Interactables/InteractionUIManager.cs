@@ -15,9 +15,6 @@ public class InteractionUIManager : MonoBehaviour
     public void TriggerCursor(bool state)
     {
         triggerReticlePointer.SetActive(state);
-    }
-    public void ShowInteractText(bool state)
-    {
         textOfInteraction.SetActive(state);
     }
 }

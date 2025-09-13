@@ -3,37 +3,41 @@ using UnityEngine;
 public class PlayerInteractables : MonoBehaviour
 {
     [SerializeField] private Camera myCam;
-    private float rayDis = 3f;
-    void Update()
+    [SerializeField] private float rayDistance = 3f;
+
+    private IInteractable currentInteractable;
+
+    private void Update()
     {
         CheckInteractables();
     }
+
     private void CheckInteractables()
     {
+        Ray ray = new(myCam.transform.position, myCam.transform.forward);
         RaycastHit hit;
-        Vector3 rayOrigin = myCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.5f));
 
-        if (Physics.Raycast(rayOrigin, myCam.transform.forward, out hit, rayDis))
+        if (Physics.Raycast(ray, out hit, rayDistance))
         {
-            Interactable interactable = hit.collider.GetComponent<Interactable>();
-            if (interactable != null)
+            IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+
+            if (interactable != currentInteractable)
             {
                 InteractionUIManager._instance.TriggerCursor(true);
-                InteractionUIManager._instance.ShowInteractText(true);
-                BasicInteraction(interactable);
-            }
-            else
-            {
-                InteractionUIManager._instance.ShowInteractText(false);
+                currentInteractable?.OnFocusExit();
+                currentInteractable = interactable;
+                currentInteractable?.OnFocusEnter();
             }
         }
         else
         {
-            InteractionUIManager._instance.ShowInteractText(false);
+            currentInteractable?.OnFocusExit();
+            currentInteractable = null;
+            InteractionUIManager._instance.TriggerCursor(false);
         }
-    }
-    private void BasicInteraction(Interactable interactable)
-    {
-        if(InputManager._instance.interactionPressed)Debug.Log("Nome do item: " + interactable.item.name);
+        if (currentInteractable != null && InputManager._instance.interactionPressed)
+        {
+            currentInteractable.OnInteract();
+        }
     }
 }
