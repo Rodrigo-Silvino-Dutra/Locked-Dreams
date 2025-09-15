@@ -17,9 +17,9 @@ public class PlayerInteractables : MonoBehaviour
         Ray ray = new(myCam.transform.position, myCam.transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, rayDistance))
+        if (Physics.Raycast(ray, out hit, rayDistance))//detecta se o raio bateu em algo
         {
-            IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+            IInteractable interactable = hit.collider.GetComponent<IInteractable>();//pega o script do objeto observado
 
             if (interactable != currentInteractable)
             {
@@ -33,11 +33,12 @@ public class PlayerInteractables : MonoBehaviour
         {
             currentInteractable?.OnFocusExit();
             currentInteractable = null;
-            InteractionUIManager._instance.TriggerCursor(false);
+            // InteractionUIManager._instance.TriggerCursor(false);
         }
-        if (currentInteractable != null && InputManager._instance.interactionPressed)
+        if(currentInteractable == null)InteractionUIManager._instance.TriggerCursor(false);
+        if (InputManager._instance.interactionPressed)
         {
-            currentInteractable.OnInteract();
+            currentInteractable?.OnInteract();
         }
     }
 }

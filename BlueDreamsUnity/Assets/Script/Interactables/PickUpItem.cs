@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpItem : MonoBehaviour, IInteractable
-{
-    [SerializeField] private string itemName;
+//Classe Exemplo, cada coletável pode ter um script para cada funçao, desde que o script herde de IInteractable
+public class PickUpItem : MonoBehaviour, IInteractable//herda de IInteractable
+{    
+    //todo script de coletável necessita possuir as 3 funçoes basicas 
     public void OnFocusEnter()
     {
     }
