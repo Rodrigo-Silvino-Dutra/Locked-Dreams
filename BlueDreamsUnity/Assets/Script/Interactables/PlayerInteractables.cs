@@ -36,11 +36,9 @@ public class PlayerInteractables : MonoBehaviour
             // InteractionUIManager._instance.TriggerCursor(false);
         }
         if(currentInteractable == null)InteractionUIManager._instance.TriggerCursor(false);
-    }
-
-    public void InteractWithSubscribe() 
-    {
-        if(currentInteractable != null)Debug.Log("Existe");
-        currentInteractable?.OnInteract();
+        if (InputManager._instance.interactionPressed)
+        {
+            currentInteractable?.OnInteract();
+        }
     }
 }
