@@ -16,6 +16,8 @@ public class CharacterBase : MonoBehaviour, IInteractable
             starTrekDoll.SetParent(holdingObject, false);
             starTrekDoll.position = gameObject.transform.position;
             starTrekDoll.SetParent(gameObject.transform, true);
+            //teste
+            
         }
     }
 }
