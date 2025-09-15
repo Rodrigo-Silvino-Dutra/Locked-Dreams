@@ -3,11 +3,11 @@ using UnityEngine;
 public class MoveDrawer : MonoBehaviour, IInteractable
 {
     [SerializeField] private Transform openedPosition;
-    private Transform closedPosition;
-    private bool isClosed = true;
+    [SerializeField] private Transform closedPosition;
+    private bool isClosed;
     void Awake()
     {
-        closedPosition = gameObject.transform;
+        isClosed = true;
     }
     public void OnFocusEnter()
     {
