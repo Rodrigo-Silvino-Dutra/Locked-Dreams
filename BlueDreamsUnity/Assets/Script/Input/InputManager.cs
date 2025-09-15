@@ -6,7 +6,7 @@ using UnityEngine.InputSystem.Interactions;
 
 public class InputManager : MonoBehaviour
 {
-    public PlayerInteractables playerinteractables;
+    public PlayerInteractables playerInteractables;
     private PlayerInput playerInput;
     private InputAction moveAction;
     private InputAction moveCamAction;
@@ -42,7 +42,7 @@ public class InputManager : MonoBehaviour
         moveCamAction.performed += OnMoveCameraEvent;
         moveCamAction.canceled += OnMoveCameraEvent;
 
-        interaction.started += OnInteract;
+        interaction.performed += OnInteract;
         interaction.canceled += OnInteract;
 
     }
@@ -54,7 +54,7 @@ public class InputManager : MonoBehaviour
         moveCamAction.performed -= OnMoveCameraEvent;
         moveCamAction.canceled -= OnMoveCameraEvent;
 
-        interaction.started -= OnInteract;
+        interaction.performed -= OnInteract;
         interaction.canceled -= OnInteract;
     }
     public void OnMoveEvent(InputAction.CallbackContext valueMove)
@@ -69,7 +69,7 @@ public class InputManager : MonoBehaviour
     }
     public void OnInteract(InputAction.CallbackContext valueInteract)
     {
-        if(valueInteract.started)
-            playerinteractables.InteractWithSubscribe();
+        if(valueInteract.performed)
+            playerInteractables.InteractWithSubscribe();
     }    
 }
