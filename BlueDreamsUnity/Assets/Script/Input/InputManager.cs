@@ -6,13 +6,13 @@ using UnityEngine.InputSystem.Interactions;
 
 public class InputManager : MonoBehaviour
 {
+    public PlayerInteractables playerinteractables;
     private PlayerInput playerInput;
     private InputAction moveAction;
     private InputAction moveCamAction;
     private InputAction interaction;
 
     public Vector2 xzPlayer, xyCam;
-    public bool interactionPressed;
 
     public static InputManager _instance;
 
@@ -69,7 +69,7 @@ public class InputManager : MonoBehaviour
     }
     public void OnInteract(InputAction.CallbackContext valueInteract)
     {
-        if (valueInteract.started)interactionPressed = true;
-        else if (valueInteract.canceled)interactionPressed = false;
+        if(valueInteract.started)
+            playerinteractables.InteractWithSubscribe();
     }    
 }
