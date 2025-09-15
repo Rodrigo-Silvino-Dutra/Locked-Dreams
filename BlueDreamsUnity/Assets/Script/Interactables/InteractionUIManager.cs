@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class InteractionUIManager : MonoBehaviour//utilize o singleton desse script para criar variaveos de  controle, ou placar
+public class InteractionUIManager : MonoBehaviour
 {
     public static InteractionUIManager _instance;
     [SerializeField] private GameObject triggerReticlePointer;
