@@ -19,13 +19,22 @@ public class MoveDrawer : MonoBehaviour, IInteractable
     {
         if (isClosed)
         {
-            transform.position = Vector3.MoveTowards(closedPosition.position, openedPosition.position, Time.fixedDeltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, openedPosition.position, 1);
             isClosed = false;
         }
         else
         {
-            transform.position = Vector3.MoveTowards(openedPosition.position, closedPosition.position, Time.fixedDeltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, closedPosition.position, 1);
             isClosed = true;
         }
     }
+    //  IEnumerator OpenAndClose()
+    // {
+    //     while(transform.position != )
+    //     {
+            
+    //     }
+    //     yield return null; 
+    // }
+
 }
