@@ -5,9 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject fade;
+    
+
     // Start is called before the first frame update
     public void Play(){
-        SceneManager.LoadScene("MainRoom");
+        IEnumerator FADE(){
+            fade.SetActive(true);
+
+            yield return new WaitForSeconds(5f);
+            
+            SceneManager.LoadScene("MainRoom");
+        }
+        StartCoroutine(FADE());
+        
     }
     public void Quit(){
         Application.Quit();
