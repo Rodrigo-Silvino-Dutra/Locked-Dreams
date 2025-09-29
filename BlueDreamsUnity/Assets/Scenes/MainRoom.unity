@@ -1324,7 +1324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &257189501
 Transform:
   m_ObjectHideFlags: 0
@@ -2778,7 +2778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 533908701418136354, guid: 28a6200eee4931a43872537cdadb1a4b, type: 3}
       propertyPath: m_Intensity
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2473655831686309731, guid: 28a6200eee4931a43872537cdadb1a4b, type: 3}
       propertyPath: m_RootOrder
@@ -7667,7 +7667,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bd9fbe0883a514abaa2ea316beed77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fade: {fileID: 1038669526}
+  fadeout: {fileID: 1038669526}
+  fadein: {fileID: 1184789698}
+  reallife: {fileID: 1031941393}
+  dream3: {fileID: 237528301}
 --- !u!65 &1012126121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7892,7 +7895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1031941394
 Transform:
   m_ObjectHideFlags: 0
@@ -12217,7 +12220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1789513727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13179,6 +13182,25 @@ Transform:
   m_Father: {fileID: 1711347057}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 135.431, z: 0}
+--- !u!1 &1902983447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3052401363582416636, guid: 08420e730177786469d8e9c8093eabe3, type: 3}
+  m_PrefabInstance: {fileID: 918958482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1902983451
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902983447}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2619086233303812490, guid: 9cc5151af3150ce46bf679b50406dad9, type: 3}
 --- !u!1001 &1911951530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13549,7 +13571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   code: {fileID: 1370571303}
-  codetext: VBLASICSMDLMHT
+  codetext: CHILD DREAMS
 --- !u!1001 &1968370964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15183,6 +15205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInteracting: 0
+  light: 0
 --- !u!1001 &2115390376
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,10 +1,11 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LightSwitch : MonoBehaviour, IInteractable
 {
     [SerializeField] public GameObject light;
+    bool active = false;
     public void OnFocusEnter()
     {
     }
@@ -16,6 +17,12 @@ public class LightSwitch : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-        light.SetActive(!light.activeSelf);
+        if (!active)
+        {
+            light.SetActive(!light.activeSelf);
+            active = true;
+            ProgressionChart._instance.light++;
+            Debug.Log(ProgressionChart._instance.light);
+        }
     }
 }
