@@ -5,14 +5,10 @@ using UnityEngine;
 public class ProgressionChart : MonoBehaviour
 {
     public static ProgressionChart _instance;
-    //DREAM 2
-    public bool isholdingStarTrekCharacter;
-    public bool jupiterInPlace;
-
+    public bool isInteracting = false;//Just alter in the OnInteract or in OnFocusExit of interactables that dont need to walk;
     void Start()
     {
-        isholdingStarTrekCharacter = false;
-        jupiterInPlace = false;
+
     }
     void Awake()
     {

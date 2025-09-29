@@ -13,9 +13,10 @@ public class CharacterBase : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         Transform starTrekDoll = holdingObject.GetChild(0);
-        if(ProgressionChart._instance.isholdingStarTrekCharacter && starTrekDoll!=null)
+        if(ProgressionDream2._instance.isholdingStarTrekCharacter && starTrekDoll!=null)
         {
-            ProgressionChart._instance.isholdingStarTrekCharacter = false;
+            
+            ProgressionDream2._instance.isholdingStarTrekCharacter = false;
             starTrekDoll.SetParent(holdingObject, false);
             starTrekDoll.position = gameObject.transform.position;
             starTrekDoll.SetParent(gameObject.transform, true);

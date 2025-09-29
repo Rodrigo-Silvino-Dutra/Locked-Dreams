@@ -1324,7 +1324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &257189501
 Transform:
   m_ObjectHideFlags: 0
@@ -1340,6 +1340,7 @@ Transform:
   - {fileID: 1714719397}
   - {fileID: 965472705}
   - {fileID: 2069971521}
+  - {fileID: 802064351}
   m_Father: {fileID: 1692045205}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2980,8 +2981,7 @@ Transform:
   m_LocalPosition: {x: -3.8999045, y: 0.11694518, z: -5.7749534}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1712725544}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5343,6 +5343,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   light: {fileID: 496315862}
+--- !u!1 &802064350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 802064351}
+  - component: {fileID: 802064352}
+  m_Layer: 0
+  m_Name: ProgressionDream2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &802064351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802064350}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 257189501}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &802064352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802064350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fd1c4f69021b1d4d9970c7a666b46cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isholdingStarTrekCharacter: 0
+  jupiterInPlace: 0
 --- !u!1001 &802526455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6018,6 +6064,10 @@ PrefabInstance:
     - target: {fileID: 3963532800814640088, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
       propertyPath: m_Name
       value: StarTrekCharacter (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3963532800814640088, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
+      propertyPath: m_TagString
+      value: Picard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
@@ -7828,7 +7878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1031941394
 Transform:
   m_ObjectHideFlags: 0
@@ -14094,6 +14144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StarTrekCharacter (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3963532800814640088, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
+      propertyPath: m_TagString
+      value: Worf
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
 --- !u!4 &2025680065 stripped
@@ -15114,8 +15168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb478ffe23d4eb44a3474523d401aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isholdingStarTrekCharacter: 0
-  jupiterInPlace: 0
 --- !u!1001 &2115390376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16434,6 +16486,10 @@ PrefabInstance:
     - target: {fileID: 3963532800814640088, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
       propertyPath: m_Name
       value: StarTrekCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3963532800814640088, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
+      propertyPath: m_TagString
+      value: Data
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}

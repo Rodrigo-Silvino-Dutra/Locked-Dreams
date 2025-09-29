@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - jupiter
+  - Data
+  - Picard
+  - Worf
   layers:
   - Default
   - TransparentFX

@@ -3,7 +3,7 @@ using UnityEngine;
 public class KickPlanet : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    private float kickForce = 5f;
+    private float kickForce = 10f;
     private Rigidbody rigidbody;
     void Start()
     {

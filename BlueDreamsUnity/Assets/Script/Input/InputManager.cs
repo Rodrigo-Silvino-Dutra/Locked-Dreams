@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 
-//asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf
 public class InputManager : MonoBehaviour
 {
     public PlayerInteractables playerInteractables;
@@ -11,6 +10,7 @@ public class InputManager : MonoBehaviour
     private InputAction moveAction;
     private InputAction moveCamAction;
     private InputAction interaction;
+    private InputAction interactionOut;
 
     public Vector2 xzPlayer, xyCam;
 
@@ -29,6 +29,7 @@ public class InputManager : MonoBehaviour
         moveAction = playerInput.actions["Move"];
         moveCamAction = playerInput.actions["Look"];
         interaction = playerInput.actions["Interact"];
+        interactionOut = playerInput.actions["OutInteract"];
     }
     private void OnEnable()
     {
@@ -45,6 +46,9 @@ public class InputManager : MonoBehaviour
         interaction.performed += OnInteract;
         interaction.canceled += OnInteract;
 
+        interactionOut.performed += OutInteract;
+        interactionOut.canceled += OutInteract;
+
     }
     private void OnDisable()
     {
@@ -56,6 +60,9 @@ public class InputManager : MonoBehaviour
 
         interaction.performed -= OnInteract;
         interaction.canceled -= OnInteract;
+
+        interactionOut.performed -= OutInteract;
+        interactionOut.canceled -= OutInteract;
     }
     public void OnMoveEvent(InputAction.CallbackContext valueMove)
     {
@@ -71,5 +78,14 @@ public class InputManager : MonoBehaviour
     {
         if(valueInteract.performed)
             playerInteractables.InteractWithSubscribe();
-    }    
+    }
+    public void OutInteract(InputAction.CallbackContext valueOutInteract)
+    {
+        if(valueOutInteract.performed)
+        {
+            playerInteractables.OutInteractWithSubscribe();
+            Debug.Log("Clicou para sair");
+        }
+    }
+        
 }

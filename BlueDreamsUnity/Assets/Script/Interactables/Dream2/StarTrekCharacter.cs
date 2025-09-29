@@ -12,13 +12,15 @@ public class StarTrekCharacter : MonoBehaviour, IInteractable
     }
     public void OnFocusExit()
     {
-
+        if(ProgressionDream2._instance.isholdingStarTrekCharacter)
+            Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     }
     public void OnInteract()
     {
-        if(!ProgressionChart._instance.isholdingStarTrekCharacter)
+        if(!ProgressionDream2._instance.isholdingStarTrekCharacter)
         {
-            ProgressionChart._instance.isholdingStarTrekCharacter = true;
+            Debug.Log("Entrou na Interacao");
+            ProgressionDream2._instance.isholdingStarTrekCharacter = true;
             gameObject.transform.position = holdingObject.position;
             gameObject.transform.SetParent(holdingObject, true);
         }

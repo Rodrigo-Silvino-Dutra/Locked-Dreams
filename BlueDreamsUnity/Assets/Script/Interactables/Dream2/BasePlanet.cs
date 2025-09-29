@@ -15,6 +15,7 @@ public class BasePlanet : MonoBehaviour
             collision.rigidbody.isKinematic = true;
             collision.gameObject.transform.position = planetFloatingPoint.position;
             collision.gameObject.transform.SetParent(planetFloatingPoint, true);
+            ProgressionDream2._instance.jupiterInPlace = true;
         }
     }
 }
