@@ -55,7 +55,7 @@ public class SleepManager : MonoBehaviour, IInteractable
 //Progression dreams 1, 2 and 3
         if(ProgressionChart._instance.light >= 2)
         {
-        StartCoroutine(SLEEP1());
+        StartCoroutine(SLEEP3());
         ProgressionChart._instance.light = 0;
         }
         StopCoroutine(SLEEP1());
