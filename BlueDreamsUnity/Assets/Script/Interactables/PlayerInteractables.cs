@@ -33,7 +33,6 @@ public class PlayerInteractables : MonoBehaviour
         }
         else
         {
-            currentInteractable?.OnFocusExit();
             currentInteractable = null;
         }
         if(currentInteractable == null)InteractionUIManager._instance.TriggerCursor(false);
