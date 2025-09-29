@@ -17,16 +17,19 @@ public class MoveDrawer : MonoBehaviour, IInteractable
     }
     public void OnInteract()
     {
-        if (isClosed)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, openedPosition.position, 1);
-            isClosed = false;
-        }
-        else
-        {
-            transform.position = Vector3.MoveTowards(transform.position, closedPosition.position, 1);
-            isClosed = true;
-        }
+        //DEIXA QUETO POR ENQUANTO
+        // if (isClosed)
+        // {
+        //     Vector3 target = new Vector3(openedPosition.position.x, transform.position.y, transform.position.z);
+        //     transform.position = Vector3.MoveTowards(transform.position, target, 1);
+        //     isClosed = false;
+        // }
+        // else
+        // {
+        //     Vector3 target = new Vector3(closedPosition.position.x, transform.position.y, transform.position.z);
+        //     transform.position = Vector3.MoveTowards(transform.position, target, 1);
+        //     isClosed = true;
+        // }
     }
     //  IEnumerator OpenAndClose()
     // {

@@ -5,6 +5,9 @@ using UnityEngine;
 public class CharacterBase : MonoBehaviour, IInteractable
 {
     [SerializeField] private Transform holdingObject;
+    [SerializeField] private string BaseName;
+    [SerializeField] private int index;
+
     public void OnFocusEnter(){}
     public void OnFocusExit(){}
     public void OnInteract()
@@ -16,8 +19,6 @@ public class CharacterBase : MonoBehaviour, IInteractable
             starTrekDoll.SetParent(holdingObject, false);
             starTrekDoll.position = gameObject.transform.position;
             starTrekDoll.SetParent(gameObject.transform, true);
-            //teste
-            
         }
     }
 }
