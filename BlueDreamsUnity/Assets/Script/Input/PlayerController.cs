@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
         if (IsGrounded && velocity.y < 0) velocity.y = -2f;
 
         Vector3 move = transform.right * InputManager._instance.xzPlayer.x + transform.forward * InputManager._instance.xzPlayer.y;
-        controller.Move(move * speed  *Time.fixedDeltaTime);
+        if(ProgressionChart._instance.isInteracting == false)controller.Move(move * speed  *Time.fixedDeltaTime);
 
         velocity.y += gravity * Time.fixedDeltaTime;
 

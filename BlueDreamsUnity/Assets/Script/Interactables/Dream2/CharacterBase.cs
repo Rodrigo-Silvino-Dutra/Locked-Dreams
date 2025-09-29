@@ -15,7 +15,11 @@ public class CharacterBase : MonoBehaviour, IInteractable
         Transform starTrekDoll = holdingObject.GetChild(0);
         if(ProgressionDream2._instance.isholdingStarTrekCharacter && starTrekDoll!=null)
         {
-            
+            if(starTrekDoll.CompareTag(BaseName))
+            {
+                ProgressionDream2._instance.dollsPlaced[index] = true;
+                ProgressionDream2._instance.ActiveGalileoPuzzle(ProgressionDream2._instance.dollsPlaced[index], index);
+            }
             ProgressionDream2._instance.isholdingStarTrekCharacter = false;
             starTrekDoll.SetParent(holdingObject, false);
             starTrekDoll.position = gameObject.transform.position;

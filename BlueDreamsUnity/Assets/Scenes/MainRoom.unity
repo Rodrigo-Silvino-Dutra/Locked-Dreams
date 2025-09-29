@@ -2114,7 +2114,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 182276036722741142, guid: d7a7ef3f6a864eb4bad4d9183faddbef, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 182276036722741142, guid: d7a7ef3f6a864eb4bad4d9183faddbef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5400,6 +5400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isholdingStarTrekCharacter: 0
+  galileoPuzzle: {fileID: 2069971520}
+  dollsPlaced: 000000
   jupiterInPlace: 0
 --- !u!1001 &802526455
 PrefabInstance:
@@ -6027,11 +6029,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1714719397}
+    m_TransformParent: {fileID: 2069971521}
     m_Modifications:
     - target: {fileID: 2572353904248057675, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2572353904248057675, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6051,15 +6053,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2572353904248057675, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2572353904248057675, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2572353904248057675, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2572353904248057675, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11639,7 +11641,6 @@ Transform:
   - {fileID: 1657066179}
   - {fileID: 5001431587622988220}
   - {fileID: 4755276663916344977}
-  - {fileID: 857037592}
   - {fileID: 2025680065}
   - {fileID: 528492256}
   m_Father: {fileID: 257189501}
@@ -14110,7 +14111,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2572353904248057675, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2572353904248057675, guid: 3b44494ffb27b344ea2e52a3049fd905, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14389,7 +14390,7 @@ CharacterController:
   m_Height: 2.0000002
   m_Radius: 0.5
   m_SlopeLimit: 0
-  m_StepOffset: 0
+  m_StepOffset: 0.1
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -14693,7 +14694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2069971521
 Transform:
   m_ObjectHideFlags: 0
@@ -14708,6 +14709,7 @@ Transform:
   m_Children:
   - {fileID: 1284221321}
   - {fileID: 7580326872939918651}
+  - {fileID: 857037592}
   m_Father: {fileID: 257189501}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15180,6 +15182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb478ffe23d4eb44a3474523d401aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteracting: 0
 --- !u!1001 &2115390376
 PrefabInstance:
   m_ObjectHideFlags: 0

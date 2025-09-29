@@ -13,7 +13,7 @@ public class StarTrekCharacter : MonoBehaviour, IInteractable
     public void OnFocusExit()
     {
         if(ProgressionDream2._instance.isholdingStarTrekCharacter)
-            Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+            Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
     }
     public void OnInteract()
     {
