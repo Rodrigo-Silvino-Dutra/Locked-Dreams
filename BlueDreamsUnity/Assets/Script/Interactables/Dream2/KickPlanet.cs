@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class KickPlanet : MonoBehaviour
+public class KickPlanet : MonoBehaviour, IInteractable
 {
     [SerializeField] private Transform player;
     private float kickForce = 10f;
@@ -15,5 +15,17 @@ public class KickPlanet : MonoBehaviour
         {
             rigidbody.AddForce((gameObject.transform.position - player.position) * kickForce, ForceMode.Force);
         }
+    }
+    public void OnFocusEnter()
+    {
+    
+    }
+    public void OnFocusExit()
+    {
+        
+    }
+    public void OnInteract()
+    {
+        rigidbody.AddForce((gameObject.transform.position - player.position).normalized * kickForce, ForceMode.Force);
     }
 }
