@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class StarTrekCharacter : MonoBehaviour, IInteractable
@@ -17,7 +16,7 @@ public class StarTrekCharacter : MonoBehaviour, IInteractable
     }
     public void OnInteract()
     {
-        if(!ProgressionDream2._instance.isholdingStarTrekCharacter)
+        if(!ProgressionDream2._instance.isholdingStarTrekCharacter && !ProgressionDream2._instance.isHoldingCD)
         {
             Debug.Log("Entrou na Interacao");
             ProgressionDream2._instance.isholdingStarTrekCharacter = true;
