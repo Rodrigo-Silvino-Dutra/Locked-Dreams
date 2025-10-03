@@ -24,6 +24,7 @@ public class MoveDrawer : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         ToggleDrawer();
+        ProgressionChart._instance.lastInteractable.Pop();
     }
 
     private void ToggleDrawer()

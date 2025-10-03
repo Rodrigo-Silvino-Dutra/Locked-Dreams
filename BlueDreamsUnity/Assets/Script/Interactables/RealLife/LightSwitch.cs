@@ -24,5 +24,6 @@ public class LightSwitch : MonoBehaviour, IInteractable
             ProgressionChart._instance.light++;
             Debug.Log(ProgressionChart._instance.light);
         }
+        ProgressionChart._instance.lastInteractable.Pop();
     }
 }

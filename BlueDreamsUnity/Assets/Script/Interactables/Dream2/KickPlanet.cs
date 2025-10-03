@@ -27,5 +27,6 @@ public class KickPlanet : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         rigidbody.AddForce((gameObject.transform.position - player.position).normalized * kickForce, ForceMode.Force);
+        ProgressionChart._instance.lastInteractable.Pop();
     }
 }

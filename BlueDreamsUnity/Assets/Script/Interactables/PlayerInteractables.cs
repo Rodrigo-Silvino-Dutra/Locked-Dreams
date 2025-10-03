@@ -7,7 +7,7 @@ public class PlayerInteractables : MonoBehaviour
     [SerializeField] private float rayDistance = 3f;
 
     private IInteractable currentInteractable;
-    private Queue<IInteractable> lastInteractable = new Queue<IInteractable>();
+    
     private void Update()
     {
         CheckInteractables();
@@ -37,15 +37,14 @@ public class PlayerInteractables : MonoBehaviour
     }
     public void InteractWithSubscribe() 
     {
-        if(currentInteractable != null)Debug.Log("Existe");
+        if (currentInteractable != null) ProgressionChart._instance.lastInteractable.Push(currentInteractable);
         currentInteractable?.OnInteract();
-        if (currentInteractable != null) lastInteractable.Enqueue(currentInteractable);
     }
     public void OutInteractWithSubscribe()
     {
         if (currentInteractable != null) Debug.Log("Existe e saindo da interacao");
-        lastInteractable.Peek()?.OnFocusExit();
-        lastInteractable.Dequeue();
+        ProgressionChart._instance.lastInteractable.Peek()?.OnFocusExit();
+        ProgressionChart._instance.lastInteractable.Pop();
 
     }
 }
