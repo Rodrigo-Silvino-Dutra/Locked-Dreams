@@ -22,7 +22,6 @@ public class PC : MonoBehaviour, IInteractable
             {
                 Destroy(cd.gameObject);
                 screen.SetActive(true);
-                ProgressionDream2._instance.linuxBooted = true;
 
             }
         }
