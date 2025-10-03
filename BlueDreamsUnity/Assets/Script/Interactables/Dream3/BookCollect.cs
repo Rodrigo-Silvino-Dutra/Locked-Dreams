@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BookCollect : MonoBehaviour, IInteractable
 { 
-    public static int booksremaining = 12;
+    public static int booksremaining = 11;
     public void OnFocusEnter()
     {
     }
