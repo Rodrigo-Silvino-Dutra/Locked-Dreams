@@ -111,6 +111,17 @@
                 },
                 {
                     "name": "",
+                    "id": "a471a99b-eaef-4968-8a6c-3dc905685c48",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "faf9b949-ee57-44e0-9fc5-f19f365268e7",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -122,8 +133,30 @@
                 },
                 {
                     "name": "",
+                    "id": "0e4b93d4-47e8-43f1-9a73-650dfb314159",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "56a8c481-178b-4b2c-a11d-133098cd5e8d",
                     "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "ScaleVector2(y=-1)",
+                    "groups": "",
+                    "action": "look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "79ba938f-52b9-4d91-889e-d699ea9e35cf",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "ScaleVector2(y=-1)",
                     "groups": "",

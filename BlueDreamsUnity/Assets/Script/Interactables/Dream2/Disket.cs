@@ -3,11 +3,13 @@ using UnityEngine;
 public class Disket : MonoBehaviour, IInteractable
 {
     [SerializeField] private Transform holdingObject;
+    [SerializeField] private Transform Drawer;
     private Rigidbody rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        if(Drawer != null)gameObject.transform.SetParent(Drawer, true);
     }
     public void OnFocusEnter()
     {

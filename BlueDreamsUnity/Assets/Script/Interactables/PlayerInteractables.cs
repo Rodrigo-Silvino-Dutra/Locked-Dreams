@@ -1,7 +1,5 @@
 using UnityEngine;
-using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 
 public class PlayerInteractables : MonoBehaviour
 {
@@ -9,7 +7,7 @@ public class PlayerInteractables : MonoBehaviour
     [SerializeField] private float rayDistance = 3f;
 
     private IInteractable currentInteractable;
-    private IInteractable lastInteractableUsed = null;
+    private Queue<IInteractable> lastInteractable = new Queue<IInteractable>();
     private void Update()
     {
         CheckInteractables();
@@ -37,18 +35,17 @@ public class PlayerInteractables : MonoBehaviour
         }
         if(currentInteractable == null)InteractionUIManager._instance.TriggerCursor(false);
     }
-
     public void InteractWithSubscribe() 
     {
         if(currentInteractable != null)Debug.Log("Existe");
         currentInteractable?.OnInteract();
-        if (lastInteractableUsed == null) lastInteractableUsed = currentInteractable;
+        if (currentInteractable != null) lastInteractable.Enqueue(currentInteractable);
     }
     public void OutInteractWithSubscribe()
     {
-        if(currentInteractable != null)Debug.Log("Existe e saindo da interacao");
-        lastInteractableUsed?.OnFocusExit();
-        lastInteractableUsed = null;
+        if (currentInteractable != null) Debug.Log("Existe e saindo da interacao");
+        lastInteractable.Peek()?.OnFocusExit();
+        lastInteractable.Dequeue();
 
     }
 }
