@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class PlayerInteractables : MonoBehaviour
 {
@@ -8,8 +9,7 @@ public class PlayerInteractables : MonoBehaviour
     [SerializeField] private float rayDistance = 3f;
 
     private IInteractable currentInteractable;
-    Stack<IInteractable> PilhaInteragiveis = new Stack<IInteractable>();
-
+    private IInteractable lastInteractableUsed = null;
     private void Update()
     {
         CheckInteractables();
@@ -42,13 +42,13 @@ public class PlayerInteractables : MonoBehaviour
     {
         if(currentInteractable != null)Debug.Log("Existe");
         currentInteractable?.OnInteract();
-        PilhaInteragiveis.Push(currentInteractable);
+        if (lastInteractableUsed == null) lastInteractableUsed = currentInteractable;
     }
     public void OutInteractWithSubscribe()
     {
         if(currentInteractable != null)Debug.Log("Existe e saindo da interacao");
-        PilhaInteragiveis.Peek()?.OnFocusExit();
-        PilhaInteragiveis.Pop();
+        lastInteractableUsed?.OnFocusExit();
+        lastInteractableUsed = null;
 
     }
 }
