@@ -16,7 +16,7 @@ public class StarTrekCharacter : MonoBehaviour, IInteractable
     }
     public void OnInteract()
     {
-        if (!ProgressionDream2._instance.isholdingStarTrekCharacter && !ProgressionDream2._instance.isHoldingCD)
+        if (!ProgressionDream2._instance.isholdingStarTrekCharacter && !ProgressionDream2._instance.isHoldingCD && !ProgressionDream2._instance.starTrekPuzzleCompleted)
         {
             Debug.Log("Entrou na Interacao");
             ProgressionDream2._instance.isholdingStarTrekCharacter = true;
