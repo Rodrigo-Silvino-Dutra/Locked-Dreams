@@ -14,12 +14,19 @@ public class ProgressionDream2 : MonoBehaviour
     }
     void Awake()
     {
-        if(_instance == null)_instance = this;
+        if (_instance == null) _instance = this;
         DontDestroyOnLoad(_instance);
     }
     public void ActiveGalileoPuzzle(bool valueOfDollPlaced, int index)
     {
-        if(valueOfDollPlaced && index == 1)galileoPuzzle.SetActive(true);
+        if (valueOfDollPlaced && index == 1) galileoPuzzle.SetActive(true);
+    }
+    public void IsEveryThingInPlace()
+    {
+        if (dollsPlaced[0] && dollsPlaced[1] && dollsPlaced[2])
+        {
+            
+        }
     }
 }
 
