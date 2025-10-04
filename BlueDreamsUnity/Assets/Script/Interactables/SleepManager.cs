@@ -58,6 +58,8 @@ public class SleepManager : MonoBehaviour, IInteractable
         StartCoroutine(SLEEP3());
         ProgressionChart._instance.light = 0;
         }
+        
+
         StopCoroutine(SLEEP1());
         StopCoroutine(SLEEP2());
         StopCoroutine(SLEEP3());
