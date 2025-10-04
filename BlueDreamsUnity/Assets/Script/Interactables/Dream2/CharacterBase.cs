@@ -13,9 +13,9 @@ public class CharacterBase : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         Transform starTrekDoll = holdingObject.GetChild(0);
-        if(ProgressionDream2._instance.isholdingStarTrekCharacter && starTrekDoll!=null)
+        if (ProgressionDream2._instance.isholdingStarTrekCharacter && starTrekDoll != null)
         {
-            if(starTrekDoll.CompareTag(BaseName))
+            if (starTrekDoll.CompareTag(BaseName))
             {
                 ProgressionDream2._instance.dollsPlaced[index] = true;
                 ProgressionDream2._instance.ActiveGalileoPuzzle(ProgressionDream2._instance.dollsPlaced[index], index);
@@ -24,6 +24,8 @@ public class CharacterBase : MonoBehaviour, IInteractable
             starTrekDoll.SetParent(holdingObject, false);
             starTrekDoll.position = gameObject.transform.position;
             starTrekDoll.SetParent(gameObject.transform, true);
+            ProgressionDream2._instance.IsEveryThingInPlace();
         }
+        ProgressionChart._instance.lastInteractable.Pop();
     }
 }

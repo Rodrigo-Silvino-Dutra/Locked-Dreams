@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProgressionChart : MonoBehaviour
 {
     public static ProgressionChart _instance;
+    public Stack<IInteractable> lastInteractable = new Stack<IInteractable>();
     public bool isInteracting = false;
     public int light = 0;
     public bool dream1 = false;

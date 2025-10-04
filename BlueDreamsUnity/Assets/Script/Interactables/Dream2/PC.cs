@@ -4,6 +4,7 @@ public class PC : MonoBehaviour, IInteractable
 {
     [SerializeField] private Transform holdingObject;
     [SerializeField] private GameObject screen;
+    [SerializeField] private GameObject Data;
     private string pc = "Linux";
 
     public void OnFocusEnter()
@@ -17,13 +18,15 @@ public class PC : MonoBehaviour, IInteractable
         Transform cd = holdingObject.GetChild(0);
         if (ProgressionDream2._instance.isHoldingCD && cd != null)
         {
-            Debug.Log("PEGOU O CD E ESTA TENTANDO INTERAGIR");
             if (cd.CompareTag(pc))
             {
                 Destroy(cd.gameObject);
+                ProgressionDream2._instance.isHoldingCD = false;
                 screen.SetActive(true);
+                Data.SetActive(true);
 
             }
         }
+        ProgressionChart._instance.lastInteractable.Pop();
     }
 }
