@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class ProgressionDream2 : MonoBehaviour
 {
+    public Animator anim;
+
     public static ProgressionDream2 _instance;
     public bool isholdingStarTrekCharacter, isHoldingCD, jupiterInPlace;
     public GameObject galileoPuzzle;
+
     public bool[] dollsPlaced = new bool[3];//data = 0; picard = 1; worf = 2;
     void Start()
     {
@@ -25,7 +28,7 @@ public class ProgressionDream2 : MonoBehaviour
     {
         if (dollsPlaced[0] && dollsPlaced[1] && dollsPlaced[2])
         {
-            
+            anim.enabled = true;
         }
     }
 }
