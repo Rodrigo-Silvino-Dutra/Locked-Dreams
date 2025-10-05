@@ -10,13 +10,15 @@ public class Padlock : MonoBehaviour, IInteractable
     Vector3 originPosition;
     private int[] result, correctCombination;
     private bool isOpened;
-    public GameObject anim;
+    public Animator anim;
+    public GameObject [] wheels;
+
     private void Start()
     {
-        anim.GetComponent<Animation>();
+        
         originPosition = transform.position;
         result = new int[]{0,0,0};
-        correctCombination = new int[] {2,7,9};
+        correctCombination = new int[] {1,1,1};
         isOpened = false;
         Rotate.Rotated += CheckResults;
         //GetComponent<dedede>().enabled = false;
@@ -68,7 +70,8 @@ public class Padlock : MonoBehaviour, IInteractable
         if (isOpened)
         {
             Destroy(gameObject);
-            //anim.GetComponent<Animation>().Play("OpenChest");
+            anim.Play("ChestOppened"); 
+            player.GetComponent<PlayerController>().enabled = true;
         }
         else
         {

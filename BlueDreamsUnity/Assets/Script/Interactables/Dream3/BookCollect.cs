@@ -19,6 +19,7 @@ public class BookCollect : MonoBehaviour, IInteractable
         booksremaining--;   
         Destroy(gameObject);
         Debug.Log("livros restantes:  " + booksremaining);
+        ProgressionChart._instance.lastInteractable.Pop();
     }
 
 

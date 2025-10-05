@@ -342,6 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7365871752715893218}
   - component: {fileID: 5304737110820201959}
+  - component: {fileID: 5304737110820201960}
   m_Layer: 0
   m_Name: Enterprise D 2_8_SimpleBakeExport
   m_TagString: Untagged
@@ -377,7 +378,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7886653943135511384}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ea1a47540c890074199ef6ca0f3314d7, type: 2}
   m_CullingMode: 0
@@ -390,6 +391,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5304737110820201960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886653943135511384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e2336cb3999a040ba8b5b104f7b931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7943011172116459345
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +447,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.06741722, g: 0.9528302, b: 0.82755965, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
