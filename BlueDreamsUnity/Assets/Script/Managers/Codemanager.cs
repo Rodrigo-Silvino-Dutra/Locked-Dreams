@@ -8,6 +8,8 @@ public class Codemanager : MonoBehaviour
 {
     public TMP_InputField code;
     public string codetext;
+    public string aaa;
+    [SerializeField] GameObject dvpaper;
     void Start()
     {
         
@@ -18,7 +20,8 @@ public class Codemanager : MonoBehaviour
     {
         if(code.text == codetext)
         {
-            Debug.Log("Correct Code");
+            dvpaper.SetActive(true);
+            codetext = aaa;
         }
     }
 }

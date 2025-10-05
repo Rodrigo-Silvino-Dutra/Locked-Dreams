@@ -5,6 +5,7 @@ using UnityEngine;
 public class puzzle3 : MonoBehaviour, IInteractable
 {
    [SerializeField] GameObject Puzzle3, fadein, fadeout;
+   public static bool puzzledone = false;
     public void OnFocusEnter()
     {
     }
@@ -19,12 +20,13 @@ public class puzzle3 : MonoBehaviour, IInteractable
         IEnumerator PUZZLE3(){
             fadeout.SetActive(true); 
             fadein.SetActive(false);
-            yield return new WaitForSeconds(3.7f);
+            yield return new WaitForSeconds(4f);
             Puzzle3.SetActive(true);
             yield return new WaitForSeconds(0.5f);
             fadein.SetActive(true);
             fadeout.SetActive(false);
                 BookCollect.booksremaining = 3;
+                puzzledone = true;
         }
         if(BookCollect.booksremaining == 0) 
         { 
