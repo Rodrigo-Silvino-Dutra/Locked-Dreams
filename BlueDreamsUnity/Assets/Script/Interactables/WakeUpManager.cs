@@ -10,6 +10,8 @@ public class WakeUpManager : MonoBehaviour
     [SerializeField] public GameObject dream1;
     [SerializeField] public GameObject dream2;
     [SerializeField] public GameObject dream3;
+    [SerializeField] public GameObject Light1;
+    
 
 IEnumerator WAKE1(){
             fadeout.SetActive(true); 
@@ -37,9 +39,11 @@ IEnumerator WAKE1(){
             yield return new WaitForSeconds(5f);
             reallife.SetActive(true);
             dream3.SetActive(false);
+            Light1.SetActive(true);
             yield return new WaitForSeconds(0.5f);
             fadein.SetActive(true);
             fadeout.SetActive(false);
+            
         }
     void Start()
     {
