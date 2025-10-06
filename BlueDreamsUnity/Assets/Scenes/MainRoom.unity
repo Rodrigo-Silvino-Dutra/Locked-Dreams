@@ -2110,7 +2110,11 @@ MonoBehaviour:
   dream1: {fileID: 469192863}
   dream2: {fileID: 257189500}
   dream3: {fileID: 237528301}
+<<<<<<< HEAD
   Light1: {fileID: 0}
+=======
+  Light1: {fileID: 1000871858}
+>>>>>>> 44b434b1136b112e351d6dfd59af6bd2ab1f62c0
 --- !u!1001 &249744147
 PrefabInstance:
   m_ObjectHideFlags: 0
