@@ -2112,12 +2112,16 @@ MonoBehaviour:
   dream3: {fileID: 237528301}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   Light1: {fileID: 0}
 =======
   Light1: {fileID: 1000871858}
 >>>>>>> 44b434b1136b112e351d6dfd59af6bd2ab1f62c0
 =======
 >>>>>>> parent of 465598e (Test22)
+=======
+  Light1: {fileID: 0}
+>>>>>>> parent of 42ce98d (Merge branch 'main' of https://github.com/Rodrigo-Silvino-Dutra/Locked-Dreams)
 --- !u!1001 &249744147
 PrefabInstance:
   m_ObjectHideFlags: 0
