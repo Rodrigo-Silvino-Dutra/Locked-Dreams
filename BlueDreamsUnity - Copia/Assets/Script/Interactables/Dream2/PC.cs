@@ -1,0 +1,33 @@
+using UnityEngine;
+
+public class PC : MonoBehaviour, IInteractable
+{
+    [SerializeField] private Transform holdingObject;
+    [SerializeField] private GameObject screen;
+    [SerializeField] private GameObject Data;
+    private string pc = "Linux";
+
+    public void OnFocusEnter()
+    {
+    }
+    public void OnFocusExit()
+    {
+    }
+    public void OnInteract()
+    {
+        Transform cd = holdingObject.GetChild(0);
+        if (ProgressionDream2._instance.isHoldingCD && cd != null && !ProgressionDream2._instance.pcIsBoosted)
+        {
+            if (cd.CompareTag(pc))
+            {
+                Destroy(cd.gameObject);
+                ProgressionDream2._instance.isHoldingCD = false;
+                ProgressionDream2._instance.pcIsBoosted = true;
+                screen.SetActive(true);
+                Data.SetActive(true);
+
+            }
+        }
+        ProgressionChart._instance.lastInteractable.Pop();
+    }
+}
