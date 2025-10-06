@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class KeyStarTrek : MonoBehaviour, IInteractable
 {
+    
     public void OnFocusEnter()
     {
     }
@@ -12,7 +13,7 @@ public class KeyStarTrek : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-        ProgressionChart._instance.dream1 = true;
+        ProgressionChart._instance.dream3 = true;
         Destroy(gameObject);
         ProgressionChart._instance.lastInteractable.Pop();
     }

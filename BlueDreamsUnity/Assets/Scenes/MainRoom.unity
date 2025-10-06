@@ -2110,7 +2110,14 @@ MonoBehaviour:
   dream1: {fileID: 469192863}
   dream2: {fileID: 257189500}
   dream3: {fileID: 237528301}
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Light1: {fileID: 0}
+=======
   Light1: {fileID: 1000871858}
+>>>>>>> 44b434b1136b112e351d6dfd59af6bd2ab1f62c0
+=======
+>>>>>>> parent of 465598e (Test22)
 --- !u!1001 &249744147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2188,7 +2195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &257189501
 Transform:
   m_ObjectHideFlags: 0
@@ -11737,7 +11744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1031941394
 Transform:
   m_ObjectHideFlags: 0
@@ -19378,7 +19385,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerReticlePointer: {fileID: 638838755}
-  textOfInteraction: {fileID: 2126498160}
 --- !u!1 &1749711124
 GameObject:
   m_ObjectHideFlags: 0

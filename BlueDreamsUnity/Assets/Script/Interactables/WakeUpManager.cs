@@ -43,7 +43,6 @@ IEnumerator WAKE1(){
             yield return new WaitForSeconds(0.5f);
             fadein.SetActive(true);
             fadeout.SetActive(false);
-            
         }
     void Start()
     {
@@ -53,7 +52,14 @@ IEnumerator WAKE1(){
     
     void Update()
     {
-        if(DivorcePaperManager.divorceviewed == true)
+        if (ProgressionDream2._instance.dream2Completed)
+        {
+            StartCoroutine(WAKE2());
+            ProgressionDream2._instance.dream2Completed = false;
+            ProgressionChart._instance.dream2 = true;
+            ProgressionChart._instance.dream1 = false;
+        }
+        if (DivorcePaperManager.divorceviewed == true)
         {
             StartCoroutine(WAKE3());
             DivorcePaperManager.divorceviewed = false;

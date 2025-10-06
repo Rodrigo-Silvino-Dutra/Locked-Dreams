@@ -16,12 +16,13 @@ public class PC : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         Transform cd = holdingObject.GetChild(0);
-        if (ProgressionDream2._instance.isHoldingCD && cd != null)
+        if (ProgressionDream2._instance.isHoldingCD && cd != null && !ProgressionDream2._instance.pcIsBoosted)
         {
             if (cd.CompareTag(pc))
             {
                 Destroy(cd.gameObject);
                 ProgressionDream2._instance.isHoldingCD = false;
+                ProgressionDream2._instance.pcIsBoosted = true;
                 screen.SetActive(true);
                 Data.SetActive(true);
 
