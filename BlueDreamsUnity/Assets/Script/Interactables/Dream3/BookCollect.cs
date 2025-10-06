@@ -16,10 +16,13 @@ public class BookCollect : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
+        if (NotebookManager.notebookOpened == true)
+        {  
         booksremaining--;   
         Destroy(gameObject);
         Debug.Log("livros restantes:  " + booksremaining);
         ProgressionChart._instance.lastInteractable.Pop();
+        };
     }
 
 
