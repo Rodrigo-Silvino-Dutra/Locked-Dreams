@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!114 &-8347829783645039179
 --- !u!114 &-8938775676154079307
 MonoBehaviour:
@@ -202,6 +203,8 @@ MonoBehaviour:
   Length: 280
 --- !u!114 &-2694022592617510030
   Length: 14100
+=======
+>>>>>>> parent of 465598e (Test22)
 --- !u!114 &-8277466477274422205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +225,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 410784
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-1929018897981822047
 --- !u!114 &-8128827978489006193
 MonoBehaviour:
@@ -439,6 +443,8 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8400
+=======
+>>>>>>> parent of 465598e (Test22)
 --- !u!114 &-2298299613058186033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,6 +465,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1830
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-1542808863491127957
 --- !u!114 &-2286091347153152295
 MonoBehaviour:
@@ -593,6 +600,8 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1620
+=======
+>>>>>>> parent of 465598e (Test22)
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,6 +615,7 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
+<<<<<<< HEAD
   - {fileID: -1929018897981822047}
   - {fileID: 7286210800553596910}
   - {fileID: -2694022592617510030}
@@ -669,12 +679,18 @@ MonoBehaviour:
   - {fileID: -896990373606178132}
   - {fileID: -8938775676154079307}
   - {fileID: 5393493880256252633}
+=======
+  - {fileID: -2298299613058186033}
+  - {fileID: -8277466477274422205}
+  EditorEvents: []
+>>>>>>> parent of 465598e (Test22)
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1469641469056697206}
+  - {fileID: -8277466477274422205}
   StringsBanks:
-  - {fileID: 3818304017833884748}
+  - {fileID: -2298299613058186033}
   cacheVersion: 131849
+<<<<<<< HEAD
   cacheTime: 638953028226987039
   SerializableEventsDict:
   - key: event:/Chest_Open
@@ -1312,3 +1328,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 411
   Length: 550
+=======
+  cacheTime: 638923150190429279
+  SerializableEventsDict: []
+>>>>>>> parent of 465598e (Test22)

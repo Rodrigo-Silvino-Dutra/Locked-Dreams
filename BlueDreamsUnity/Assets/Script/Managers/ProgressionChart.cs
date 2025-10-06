@@ -7,7 +7,6 @@ public class ProgressionChart : MonoBehaviour
     public Stack<IInteractable> lastInteractable = new Stack<IInteractable>();
     public bool isInteracting = false;
     public int light = 0;
-    public bool datacheck = false;
     public bool dream1 = false;
     public bool dream2 = false;
     public bool dream3 = false;
