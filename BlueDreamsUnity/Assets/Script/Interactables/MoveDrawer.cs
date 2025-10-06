@@ -23,7 +23,7 @@ public class MoveDrawer : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-        ToggleDrawer();
+        if(ProgressionChart._instance.dream2)ToggleDrawer();
         ProgressionChart._instance.lastInteractable.Pop();
     }
 
@@ -33,7 +33,6 @@ public class MoveDrawer : MonoBehaviour, IInteractable
 
         if (currentCoroutine != null)
             StopCoroutine(currentCoroutine);
-
         currentCoroutine = StartCoroutine(Move(isOpen));
     }
 

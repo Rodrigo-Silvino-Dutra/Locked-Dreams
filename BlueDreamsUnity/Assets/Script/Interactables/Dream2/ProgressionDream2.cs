@@ -3,14 +3,15 @@ using UnityEngine;
 public class ProgressionDream2 : MonoBehaviour
 {
     public Animator anim;
-
     public static ProgressionDream2 _instance;
-    public bool isholdingStarTrekCharacter, isHoldingCD, jupiterInPlace, starTrekPuzzleCompleted;
+    public bool isholdingStarTrekCharacter, isHoldingCD, jupiterInPlace, starTrekPuzzleCompleted, dream2Completed, pcIsBoosted;
     public GameObject galileoPuzzle;
 
     public bool[] dollsPlaced = new bool[3];//data = 0; picard = 1; worf = 2;
     void Start()
     {
+        dream2Completed = false;
+        pcIsBoosted = false;
         isholdingStarTrekCharacter = false;
         isHoldingCD = false;
         jupiterInPlace = false;

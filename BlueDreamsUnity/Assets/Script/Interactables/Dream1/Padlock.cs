@@ -11,7 +11,6 @@ public class Padlock : MonoBehaviour, IInteractable
     private int[] result, correctCombination;
     private bool isOpened;
     public Animator anim;
-    public GameObject [] wheels;
 
     private void Start()
     {
@@ -21,7 +20,6 @@ public class Padlock : MonoBehaviour, IInteractable
         correctCombination = new int[] {1,1,1};
         isOpened = false;
         Rotate.Rotated += CheckResults;
-        //GetComponent<dedede>().enabled = false;
     }
 
     private void CheckResults(string wheelName, int number)
@@ -72,6 +70,7 @@ public class Padlock : MonoBehaviour, IInteractable
             Destroy(gameObject);
             anim.Play("ChestOppened"); 
             player.GetComponent<PlayerController>().enabled = true;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Chest_Open", transform.position);
         }
         else
         {
